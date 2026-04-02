@@ -1,8 +1,14 @@
-FROM node:20-alpine
-WORKDIR /app
-COPY package*.json ./
+FROM node:22-alpine
 
-RUN npm install
+WORKDIR /app
+
+# Install dependencies first for better layer caching.
+COPY package*.json ./
+RUN npm ci
+
+# Copy source code for development runtime.
 COPY . .
+
 EXPOSE 5173
-CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0", "--port", "5173"]
