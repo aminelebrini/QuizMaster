@@ -1,7 +1,9 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-50 to-pink-100 flex items-center justify-center px-4 py-12">
-    <div class="w-full max-w-md">
-      <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+  <div class="relative min-h-screen overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-cyan-50 flex items-center justify-center px-4 py-12">
+    <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(99,102,241,0.10)_0%,rgba(255,255,255,0)_35%,rgba(6,182,212,0.10)_100%)]"></div>
+
+    <div class="relative w-full max-w-md">
+      <div class="bg-white rounded-2xl shadow-2xl ring-1 ring-slate-200 overflow-hidden">
         <div class="bg-gradient-to-r from-indigo-500 to-purple-600 px-8 py-6">
           <h1 class="text-3xl font-bold text-white text-center mb-6">QuizMaster</h1>
           <p class="text-white text-center text-sm">Login to your account</p>
